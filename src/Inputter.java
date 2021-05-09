@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Inputter {
 
-    protected static int a;
-    protected static int b;
+    protected static float a;
+    protected static float b;
 
     public static void inputting() {
         Scanner scanner = new Scanner(System.in);
