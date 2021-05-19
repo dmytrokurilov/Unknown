@@ -12,7 +12,7 @@ public class Calculator {
         return result;
     }
 
-    private float equationSolution (float operand1, String operator, float operand2) {
+    protected float equationSolution (float operand1, String operator, float operand2) {
         float result = 0;
         if (operator.equals("+")) {
             result =  addition(operand1, operand2);
@@ -29,19 +29,19 @@ public class Calculator {
         return result;
     }
 
-    private float addition(float operand1, float operand2) {
+    protected float addition(float operand1, float operand2) {
         return operand1 + operand2;
     }
 
-    private float subtraction(float operand1, float operand2) {
+    protected float subtraction(float operand1, float operand2) {
         return operand1 - operand2;
     }
 
-    private float multiply(float operand1, float operand2) {
+    protected float multiply(float operand1, float operand2) {
         return operand1 * operand2;
     }
 
-    private float dividing(float operand1, float operand2) {
+    protected float dividing(float operand1, float operand2) {
         return operand1 / operand2;
     }
 }

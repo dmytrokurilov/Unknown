@@ -4,11 +4,14 @@ public class Inputter {
 
     protected static float a;
     protected static float b;
+    protected static String operation;
 
     public static void inputting() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input integer A");
         a = scanner.nextInt();
+        System.out.println("Input operation");
+        operation = scanner.next();
         System.out.println("Input integer B");
         b = scanner.nextInt();
         scanner.close();
