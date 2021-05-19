@@ -14,4 +14,15 @@ public class Inputter {
         scanner.close();
     }
 
+    public float inputOperand () {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextFloat();
+    }
+
+
+    public String inputOperator () {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.next();
+    }
+
 }
