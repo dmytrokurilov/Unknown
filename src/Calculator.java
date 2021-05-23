@@ -1,6 +1,13 @@
+import java.io.IOException;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+
 public class Calculator {
 
-    public float executor () {
+    private static Logger log = Logger.getLogger(Calculator.class.getName());
+
+
+    public float executor () throws IOException {
         Inputter inputter = new Inputter();
         System.out.println("Input first operand");
         float operand1 = inputter.inputOperand();
@@ -12,7 +19,8 @@ public class Calculator {
         return result;
     }
 
-    protected float equationSolution (float operand1, String operator, float operand2) {
+    protected float equationSolution (float operand1, String operator, float operand2) throws IOException {
+
         float result = 0;
         if (operator.equals("+")) {
             result =  addition(operand1, operand2);
@@ -26,11 +34,17 @@ public class Calculator {
         else if (operator.equals("/")) {
             result =  dividing(operand1, operand2);
         }
+
+        LogManager.getLogManager().readConfiguration();
+        log.info("some info message");
         return result;
+
+
     }
 
     protected float addition(float operand1, float operand2) {
         return operand1 + operand2;
+
     }
 
     protected float subtraction(float operand1, float operand2) {

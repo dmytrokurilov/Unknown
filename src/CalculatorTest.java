@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
 
 
 public class CalculatorTest {
@@ -97,28 +98,28 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testEquationSolutionAddition() {
+    public void testEquationSolutionAddition() throws IOException {
         float expectedResult = 40;
         float actualResult = calculator.equationSolution(10.0f, "+", 30.0f);
         Assert.assertEquals(expectedResult, actualResult, 0.000001);
     }
 
     @Test
-    public void testEquationSolutionSubtraction() {
+    public void testEquationSolutionSubtraction() throws IOException {
         float expectedResult = 40;
         float actualResult = calculator.equationSolution(50.0f, "-", 10.0f);
         Assert.assertEquals(expectedResult, actualResult, 0.000001);
     }
 
     @Test
-    public void testEquationSolutionMultiply() {
+    public void testEquationSolutionMultiply() throws IOException {
         float expectedResult = 40;
         float actualResult = calculator.equationSolution(10.0f, "*", 4.0f);
         Assert.assertEquals(expectedResult, actualResult, 0.000001);
     }
 
     @Test
-    public void testEquationSolutionDividing() {
+    public void testEquationSolutionDividing() throws IOException {
         float expectedResult = 40;
         float actualResult = calculator.equationSolution(160.0f, "/", 4.0f);
         Assert.assertEquals(expectedResult, actualResult, 0.000001);
